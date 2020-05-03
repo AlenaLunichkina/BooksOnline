@@ -1,0 +1,30 @@
+@import "../../node_modules/normalize.css/normalize";
+// @import "../../node_modules/slick-carousel/slick/slick";
+// @import "../../node_modules/magnific-popup/dist/magnific-popup";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  @media screen and (max-width: 1400px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
+}
