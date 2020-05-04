@@ -18,6 +18,12 @@ a {
   text-decoration: none;
 }
 
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
 .main-wrapper {
   width: 70%;
   margin: 0 auto;

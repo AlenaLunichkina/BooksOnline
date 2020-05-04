@@ -100,6 +100,7 @@
 }
 
 .film-info__price-block .button {
+  position: relative;
   white-space: nowrap;
   color: #fff;
   font-size: 1.2rem;
@@ -109,13 +110,38 @@
   border-radius: 3px;
   border-width: 0;
   cursor: pointer;
-  background: linear-gradient(to top, #79b260, #92d774);
+  overflow: hidden;
+  border: 3px solid #79b260;
+  color: #4f773e;
+  background-color: #aada95;
+
   @media screen and (max-width: 768px) {
     margin-top: 10px;
   }
 }
 
+.film-info__price-block .button:after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  background-color: rgba(255, 255, 255, 0.336);
+  width: 15px;
+  height: 200px;
+  transform: rotate(45deg) translate(-144px, 71px);
+  transition: 0.5s;
+}
+
+.film-info__price-block .button:hover:after {
+  transform: rotate(45deg) translate(49px, 27px);
+}
+
+.film-info__price-block .button:hover {
+  color: #265711;
+  border: 3px solid #4d8a33;
+}
+
 .film-info__price-block .button:active,
+.film-info__price-block .button:hover,
 .film-info__price-block .button:focus {
   outline: none;
 }
@@ -260,6 +286,7 @@
     padding: 10px;
 
     textarea {
+      width: 450px;
       margin-left: 5px;
       padding: 5px;
       border: 1px solid #dedede;
@@ -270,6 +297,7 @@
       }
       @media screen and (max-width: 768px) {
         width: 100%;
+        margin-left: 0;
       }
     }
     span {
@@ -288,21 +316,45 @@
 
   .button {
     white-space: nowrap;
-    color: #fff;
+    position: relative;
     font-size: 1.2rem;
     font-weight: 500;
     padding: 2% 6%;
     text-align: center;
     border-radius: 3px;
     border-width: 0;
+    margin-right: 10px;
     cursor: pointer;
-    background: linear-gradient(to top, #79b260, #92d774);
+    overflow: hidden;
+    border: 3px solid #79b260;
+    color: #4f773e;
+    background-color: #aada95;
   }
   .button:active,
   .button:hover,
   .button:focus {
     outline: none;
   }
+}
+
+.comment-form .button:after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  background-color: rgba(255, 255, 255, 0.336);
+  width: 15px;
+  height: 200px;
+  transform: rotate(45deg) translate(-144px, 71px);
+  transition: 0.5s;
+}
+
+.comment-form .button:hover:after {
+  transform: rotate(45deg) translate(49px, 27px);
+}
+
+.comment-form .button:hover {
+  color: #265711;
+  border: 3px solid #4d8a33;
 }
 
 .right-block {

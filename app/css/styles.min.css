@@ -106,6 +106,7 @@
 }
 
 .film-info__price-block .button {
+  position: relative;
   white-space: nowrap;
   color: #fff;
   font-size: 1.2rem;
@@ -115,7 +116,10 @@
   border-radius: 3px;
   border-width: 0;
   cursor: pointer;
-  background: linear-gradient(to top, #79b260, #92d774);
+  overflow: hidden;
+  border: 3px solid #79b260;
+  color: #4f773e;
+  background-color: #aada95;
 }
 
 @media screen and (max-width: 768px) {
@@ -124,7 +128,28 @@
   }
 }
 
+.film-info__price-block .button:after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  background-color: rgba(255, 255, 255, 0.336);
+  width: 15px;
+  height: 200px;
+  transform: rotate(45deg) translate(-144px, 71px);
+  transition: 0.5s;
+}
+
+.film-info__price-block .button:hover:after {
+  transform: rotate(45deg) translate(49px, 27px);
+}
+
+.film-info__price-block .button:hover {
+  color: #265711;
+  border: 3px solid #4d8a33;
+}
+
 .film-info__price-block .button:active,
+.film-info__price-block .button:hover,
 .film-info__price-block .button:focus {
   outline: none;
 }
@@ -290,6 +315,7 @@
 }
 
 .comment-form .comment-textarea textarea {
+  width: 450px;
   margin-left: 5px;
   padding: 5px;
   border: 1px solid #dedede;
@@ -306,6 +332,7 @@
 @media screen and (max-width: 768px) {
   .comment-form .comment-textarea textarea {
     width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -324,21 +351,45 @@
 
 .comment-form .button {
   white-space: nowrap;
-  color: #fff;
+  position: relative;
   font-size: 1.2rem;
   font-weight: 500;
   padding: 2% 6%;
   text-align: center;
   border-radius: 3px;
   border-width: 0;
+  margin-right: 10px;
   cursor: pointer;
-  background: linear-gradient(to top, #79b260, #92d774);
+  overflow: hidden;
+  border: 3px solid #79b260;
+  color: #4f773e;
+  background-color: #aada95;
 }
 
 .comment-form .button:active,
 .comment-form .button:hover,
 .comment-form .button:focus {
   outline: none;
+}
+
+.comment-form .button:after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  background-color: rgba(255, 255, 255, 0.336);
+  width: 15px;
+  height: 200px;
+  transform: rotate(45deg) translate(-144px, 71px);
+  transition: 0.5s;
+}
+
+.comment-form .button:hover:after {
+  transform: rotate(45deg) translate(49px, 27px);
+}
+
+.comment-form .button:hover {
+  color: #265711;
+  border: 3px solid #4d8a33;
 }
 
 .right-block {
@@ -517,6 +568,12 @@ footer {
 .header__top-links {
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .header__top-links {
+    justify-content: center;
+  }
 }
 
 .header__top-links a {
@@ -862,7 +919,7 @@ footer {
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
   border: 1px solid rgba(163, 163, 163, 0.521);
 }
 
@@ -926,9 +983,14 @@ footer {
 
 .pages .page {
   display: inline-block;
+  border: 1px solid transparent;
   padding: 5px 10px;
   color: grey;
   cursor: pointer;
+}
+
+.pages .page:hover {
+  color: #b4b4b4;
 }
 
 .pages .page--active {
@@ -1349,6 +1411,12 @@ body {
 
 a {
   text-decoration: none;
+}
+
+button:hover,
+button:active,
+button:focus {
+  outline: none;
 }
 
 .main-wrapper {

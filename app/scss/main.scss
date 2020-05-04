@@ -145,7 +145,7 @@
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
   border: 1px solid rgba(163, 163, 163, 0.521);
 
   .book {
@@ -199,9 +199,14 @@
 
   .page {
     display: inline-block;
+    border: 1px solid transparent;
     padding: 5px 10px;
     color: grey;
     cursor: pointer;
+  }
+
+  .page:hover {
+    color: rgb(180, 180, 180);
   }
 
   .page--active {
