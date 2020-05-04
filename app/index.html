@@ -27,7 +27,9 @@
         <div class="main-wrapper">
           <div class="header__info-block">
             <div class="header__logo">
-              <a href="#"><img src="img/logo.gif" alt="BooksOnline" /></a>
+              <a href="index.html"
+                ><img src="img/logo.gif" alt="BooksOnline"
+              /></a>
             </div>
 
             <div class="header__info-block-search">
@@ -70,12 +72,25 @@
     <body>
       <div class="main-wrapper">
         <div class="advertising-block">
-          <div class="baner1">
-            <img src="img/banner.png" alt="" />
-          </div>
-          <div class="baner2">
-            <img src="img/baner2.png" alt="" />
-          </div>
+          <a class="baner1" href="#">
+            <div class="banner1_images">
+              <img
+                class="advertising-banner current-banner"
+                src="img/banner.png"
+                alt=""
+              />
+              <img class="advertising-banner" src="img/banner2.png" alt="" />
+              <img class="advertising-banner" src="img/banner3.png" alt="" />
+            </div>
+            <i class="fas fa-caret-square-left"></i>
+            <i class="fas fa-caret-square-right"></i>
+          </a>
+
+          <a class="baner2" href="#">
+            <div class="banner2_images">
+              <img src="img/baner2.png" alt="" />
+            </div>
+          </a>
         </div>
         <div class="page2-main">
           <div class="categories">
@@ -119,7 +134,7 @@
               <a class="link" href="#">Special Offers</a>
             </div>
             <div class="books">
-              <a href="/app/book-item.html" class="book">
+              <a href="book-item.html" class="book">
                 <img src="img/poster_StarWars.gif" alt="" />
                 <div class="book__name">Star Wars Episode I</div>
                 <div class="book__price">$50</div>
@@ -207,12 +222,12 @@
                 <div class="book__price">$50</div>
               </a>
               <div class="pages">
-                <a href="#" class="page">1</a>
-                <a href="#" class="page">2</a>
-                <a href="#" class="page">3</a>
-                <a href="#" class="page page--active">4</a>
-                <a href="#" class="page">5</a>
-                <a href="#" class="page">6</a>
+                <div href="" class="page">1</div>
+                <div href="" class="page">2</div>
+                <div href="" class="page">3</div>
+                <div href="" class="page page--active">4</div>
+                <div href="" class="page">5</div>
+                <div href="" class="page">6</div>
               </div>
             </div>
           </div>
@@ -309,6 +324,6 @@
         </div>
       </div>
     </footer>
-    <script src="/scripts/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

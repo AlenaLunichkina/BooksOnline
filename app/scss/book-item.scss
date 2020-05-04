@@ -115,6 +115,11 @@
   }
 }
 
+.film-info__price-block .button:active,
+.film-info__price-block .button:focus {
+  outline: none;
+}
+
 .bank-cards img {
   padding-top: 1%;
 }
@@ -142,42 +147,41 @@
   background-color: #fff;
   margin-top: 5px;
   padding: 5px 10px;
-  height: 100px;
+  height: 211px;
   overflow-x: auto;
 }
 
-.left-block__button1 {
-  position: absolute;
-  top: -23px;
-  left: 0;
-  color: #979292;
+.left-block__button {
+  border-radius: 5px 5px 0 0;
+  background-color: #b1b1b1;
+  padding: 6px;
+  color: #fff;
   cursor: pointer;
+  position: absolute;
+  top: -25px;
+}
+
+.left-block__button1 {
+  left: 0;
 }
 
 .left-block__button2 {
-  position: absolute;
-  top: -23px;
   left: 170px;
-  color: #979292;
-  cursor: pointer;
 }
 
-.left-block__button-active {
-  border: 1px solid #dedede;
-  border-bottom-width: 0;
-  padding: 5px 10px;
-  border-radius: 5px 5px 0 0;
-  background-color: #fff;
-  background-color: #fdfdfd;
+.left-block__text {
+  display: none;
 }
 
-.left-block__button-unactive {
-  border: 1px solid #dedede;
-  border-radius: 5px 5px 0 0;
-  padding: 5px 10px;
-  color: #fff;
-  font-weight: 100;
-  background-color: #c5c5c5;
+.left-block__text--active {
+  display: block;
+}
+
+.left-block__button--active {
+  color: rgb(121, 121, 121);
+  background-color: #ffffff;
+  border: 1px solid rgba(128, 128, 128, 0.226);
+  border-bottom-color: transparent;
 }
 
 .left-block__review-and-write-comment {
@@ -293,6 +297,11 @@
     border-width: 0;
     cursor: pointer;
     background: linear-gradient(to top, #79b260, #92d774);
+  }
+  .button:active,
+  .button:hover,
+  .button:focus {
+    outline: none;
   }
 }
 

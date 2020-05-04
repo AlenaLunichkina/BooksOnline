@@ -124,6 +124,11 @@
   }
 }
 
+.film-info__price-block .button:active,
+.film-info__price-block .button:focus {
+  outline: none;
+}
+
 .bank-cards img {
   padding-top: 1%;
 }
@@ -154,42 +159,41 @@
   background-color: #fff;
   margin-top: 5px;
   padding: 5px 10px;
-  height: 100px;
+  height: 211px;
   overflow-x: auto;
 }
 
-.left-block__button1 {
-  position: absolute;
-  top: -23px;
-  left: 0;
-  color: #979292;
+.left-block__button {
+  border-radius: 5px 5px 0 0;
+  background-color: #b1b1b1;
+  padding: 6px;
+  color: #fff;
   cursor: pointer;
+  position: absolute;
+  top: -25px;
+}
+
+.left-block__button1 {
+  left: 0;
 }
 
 .left-block__button2 {
-  position: absolute;
-  top: -23px;
   left: 170px;
-  color: #979292;
-  cursor: pointer;
 }
 
-.left-block__button-active {
-  border: 1px solid #dedede;
-  border-bottom-width: 0;
-  padding: 5px 10px;
-  border-radius: 5px 5px 0 0;
-  background-color: #fff;
-  background-color: #fdfdfd;
+.left-block__text {
+  display: none;
 }
 
-.left-block__button-unactive {
-  border: 1px solid #dedede;
-  border-radius: 5px 5px 0 0;
-  padding: 5px 10px;
-  color: #fff;
-  font-weight: 100;
-  background-color: #c5c5c5;
+.left-block__text--active {
+  display: block;
+}
+
+.left-block__button--active {
+  color: #797979;
+  background-color: #ffffff;
+  border: 1px solid rgba(128, 128, 128, 0.226);
+  border-bottom-color: transparent;
 }
 
 .left-block__review-and-write-comment {
@@ -329,6 +333,12 @@
   border-width: 0;
   cursor: pointer;
   background: linear-gradient(to top, #79b260, #92d774);
+}
+
+.comment-form .button:active,
+.comment-form .button:hover,
+.comment-form .button:focus {
+  outline: none;
 }
 
 .right-block {
@@ -659,6 +669,7 @@ footer {
   font-size: 9px;
   color: #fff;
   text-align: center;
+  line-height: normal;
 }
 
 .header__third-block {
@@ -701,16 +712,61 @@ footer {
 }
 
 .advertising-block .baner1 {
+  position: relative;
   flex-basis: 72%;
+  display: block;
   margin-right: 10px;
 }
 
+.advertising-block .baner1 .banner1_images {
+  position: relative;
+  width: 100%;
+}
+
+.advertising-block .baner1 .banner1_images .advertising-banner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.advertising-block .baner1 .banner1_images .current-banner {
+  display: block;
+}
+
 .advertising-block .baner2 {
+  display: block;
   flex-basis: 27%;
 }
 
-.advertising-block img {
+.advertising-block .baner2 .banner2_images {
   width: 100%;
+}
+
+.advertising-block .baner2 .banner2_images img {
+  width: inherit;
+}
+
+.fa-caret-square-left,
+.fa-caret-square-right {
+  position: absolute;
+  top: 45%;
+  color: rgba(255, 255, 255, 0.288);
+  font-size: 2rem;
+}
+
+.fa-caret-square-left:hover,
+.fa-caret-square-right:hover {
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.fa-caret-square-left {
+  left: 1%;
+}
+
+.fa-caret-square-right {
+  right: 1%;
 }
 
 .page2-main {
@@ -859,7 +915,6 @@ footer {
 }
 
 .book:hover {
-  border: 1px solid rgba(202, 198, 198, 0.212);
   box-shadow: inset 0 0 15px 0 rgba(110, 100, 100, 0.164);
 }
 
@@ -872,6 +927,8 @@ footer {
 .pages .page {
   display: inline-block;
   padding: 5px 10px;
+  color: grey;
+  cursor: pointer;
 }
 
 .pages .page--active {
@@ -881,8 +938,8 @@ footer {
 
 .sale-sticker {
   position: absolute;
-  top: 5px;
-  right: 26px;
+  top: 5%;
+  right: 13%;
   width: 50px;
   height: 50px;
   background-color: red;
@@ -1309,4 +1366,36 @@ a {
   .main-wrapper {
     width: 90%;
   }
+}
+
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ecedee;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #a3a2a2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #79b260;
+}
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
 }
